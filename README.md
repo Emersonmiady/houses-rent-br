@@ -2,6 +2,8 @@
 ---
 Bom, eu estava navegando pelo *Kaggle* e me deparei com um conjunto de dados a respeito dos valores dos aluguéis em algumas cidades brasileiras. Eu achei ele bem interessante, e já que uma das minhas intenções era treinar o que havia aprendido de ML no *DataCamp*, além de praticar *EDA* e *storytelling*, aceitei investigar um pouco mais nele.
 
+- Análise completa em "**alugueis_brasil.ipynb**".
+
 Observação: para melhorar a visualização de algumas imagens, por conta da resolução que foi comprometida, recomendo clicar em "Open in Colab", no começo do *notebook*.
 # Contexto
 ---
