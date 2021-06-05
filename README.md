@@ -31,7 +31,7 @@ Algumas visualizações que obtive estão abaixo:
 ![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/accept_animal_city.png?raw=true)
 ![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/furniture_city.png?raw=true)
 ![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/furniture_rent_amount.png?raw=true)
-![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/prediction_rf.png?raw=true)
+![]()
 
 ## 3. Preparando para o ML
 1. Retirei as colunas que eu não queria (`floor` e `hoa (R$)`);
