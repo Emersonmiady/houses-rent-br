@@ -59,7 +59,7 @@ A métrica de comparação foi o RMSE, e no caso, a Random Forest Regressor obte
 ## 4.4. Machine Learning: Tuning de Hiperparâmetros
 Após escolher o modelo acima, resolvi verificar se haveria alguma forma de melhorá-lo ainda mais, testando diferentes parâmetros. Entretanto, foi possível concluir que mesmo combinando valores nos argumentos do algoritmo, o RMSE não foi menor que o algoritmo padrão do *sklearn*, e portanto, a melhor escolha foi escolher a floresta aleatória de antes.
 
-## 6. Testando o modelo
+## 5. Testando o modelo
 Resultado do `y_pred` e `y_test`:
 ![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/prediction_rf_sklearn.png?raw=true)
 
