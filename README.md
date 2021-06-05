@@ -24,21 +24,22 @@ Sendo assim, tentei utilizar o que sabia de ***Machine Learning*** para prever e
 # Descrição breve das etapas
 ---
 ## 1. Pré-processamento
-- Transformação do "-" na coluna floor para 0.
+- Transformação do "-" na coluna floor para 0;
+- Transformação da coluna `floor` em numérica;
+- Remoção de **alguns** *outliers*.
 
 ## 2. Análise Exploratória dos Dados
 Algumas visualizações que obtive estão abaixo:
 ![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/accept_animal_city.png?raw=true)
 ![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/furniture_city.png?raw=true)
 ![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/furniture_rent_amount.png?raw=true)
-![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/prediction_rf_sklearn.png?raw=true)
 
 ## 3. Preparando para o ML
-1. Retirei as colunas que eu não queria (`floor` e `hoa (R$)`);
-2. Transformei as variáveis categóricas em *dummies* e retirei as redundantes;
-3. Dividi em 0.2 de teste e apliquei o `StandardScaler()` para a padronização dos dados, já que ultilizaríamos modelos regressivos.
+1. Retirei as colunas que eu não queria (`floor`, `fire insurance (R$)` e `total (R$)`);
+2. Transformei as variáveis categóricas em *dummies*, retirando as redundantes;
+3. Dividi as variáveis independentes (X) e dependente (y).
 
-## 4. Machine Learning: modelos testados
+## 4.1. Machine Learning: modelos testados
 Foram testados:
 - K-Neighbors Regressor;
 - Regressão Linear;
@@ -47,22 +48,30 @@ Foram testados:
 - Decision Tree Regressor;
 - Random Forest Regressor.
 
-## 4. Resultados das métricas
+## 4.2. Machine Learning: Aplicando a modelagem
+Após selecionar os modelos, fiz um *cross-validation* com todos eles, para ver qual era o melhor.
+
+## 4.3. Machine Learning: Resultados das métricas
 <img src="https://github.com/Emersonmiady/houses-rent-br/blob/main/img/ml_results.png?raw=true">
 
-A métrica de comparação "score" era a "R-squared", e no caso, a Random Forest obteve o melhor resultado.
+A métrica de comparação foi o RMSE, e no caso, a Random Forest Regressor obteve o melhor resultado.
 
-## 5. Testando o modelo
+## 4.4. Machine Learning: Tuning de Hiperparâmetros
+Após escolher o modelo acima, resolvi verificar se haveria alguma forma de melhorá-lo ainda mais, testando diferentes parâmetros. Entretanto, foi possível concluir que mesmo combinando valores nos argumentos do algoritmo, o RMSE não foi menor que o algoritmo padrão do *sklearn*, e portanto, a melhor escolha foi escolher a floresta aleatória de antes.
+
+## 6. Testando o modelo
+Resultado do `y_pred` e `y_test`:
+![](https://github.com/Emersonmiady/houses-rent-br/blob/main/img/prediction_rf_sklearn.png?raw=true)
+
 Testando uma casa com essas características:
 - Área de 250 m²;
 - 3 quartos;
 - 2 banheiros;
 - 1 vaga;
-- Valor do condomínio (aproximado): R\$ 1700;
-- Valor do seguro incêndio (aproximado): R\$ 60;
-- Valor total exigido pelo cliente (aproximado): R\$ 8000;
+- Valor do condomínio (aproximado): R\$ 1.700;
+- Valor do IPTU (aproximado): R\$ 1.000;
 - Localizada em São Paulo;
 - Permissão da entrada de animais;
 - Não sendo mobiliada.
 
-Seria recomendado um aluguel de R$ 5054.35!
+Resultado: seria recomendado um aluguel de R$ 2822.76.
