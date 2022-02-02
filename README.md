@@ -4,7 +4,9 @@ Bom, eu estava navegando pelo *Kaggle* e me deparei com um conjunto de dados a r
 
 - Análise completa em "**alugueis_brasil.ipynb**".
 
-Observação: para melhorar a visualização de algumas imagens, por conta da resolução que foi comprometida, recomendo clicar em "Open in Colab", no começo do *notebook*.
+Observação 1: para melhorar a visualização de algumas imagens, por conta da resolução que foi comprometida, recomendo clicar em "Open in Colab", no começo do *notebook*.
+Observação 2: resolvi melhorar ainda mais este projeto criando uma versão 2 dele, juntos com algumas pessoas da minha faculdade para um certo trabalho. Esta segunda versão é apresentada no arquivo "**alugueis_brasil_v2.ipynb**", recomendo muito a sua visualização, pois foi feito uma análise muito mais profunda e detalhada!
+
 # Contexto
 ---
 Um dos maiores desafios que as imobiliárias enfrentam é a precificação de seu imóvel, isso porque o mercado é extremamente dinâmico, logo exige um acompanhamento regular das tendências e perspectivas do setor por certos profissionais. Considerando a instabilidade econômica brasileira nesses últimos anos, esse setor adquiriu ainda mais dificuldades para retomar seu crescimento, sendo este um dos fatores que tornaram a precificação em uma tarefa complexa para as empresas.
